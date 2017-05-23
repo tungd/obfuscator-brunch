@@ -1,7 +1,6 @@
 {
-  "name": "git-sha-brunch",
+  "name": "obfuscator-brunch",
   "version": "1.0.0",
-  "private": true,
   "dependencies": {
     "javascript-obfuscator": "^0.9.4"
   },

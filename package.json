@@ -1,0 +1,11 @@
+{
+  "name": "git-sha-brunch",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "javascript-obfuscator": "^0.9.4"
+  },
+  "peerDependencies": {
+    "brunch": "^2"
+  }
+}

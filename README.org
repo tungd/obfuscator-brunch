@@ -1,0 +1,44 @@
+#+title: obfuscator-brunch
+
+* JavaScript Obfuscator plugin for Brunch
+
+  Add [[https://github.com/javascript-obfuscator/javascript-obfuscator][javascript-obfuscator]] supports for Brunch.
+
+* Usage
+
+  - Install the plugin via =npm=:
+
+    #+BEGIN_SRC sh
+      npm install --save-dev obfuscator-brunch
+    #+END_SRC
+
+    Or =yarn=:
+
+    #+BEGIN_SRC sh
+      yarn add -D obfuscator-brunch
+    #+END_SRC
+
+  - To specify options, use =config.plugins.obfuscator=. These  are passed
+    transparently to JavaScript Obfuscator. See the [[https://github.com/javascript-obfuscator/javascript-obfuscator#javascript-obfuscator-options][JavaScript Obfuscator Options]] for reference.
+
+  /Note/: To use this plugin along side UglifyJS, please make sure
+  =uglify-js-brunch= is listed before this plugin in =package.json=, especially
+  if you have =selfDefending= enabled. For beginner, or you don't need advanced
+  UglifyJS features like constant define and dead-code removal, I'd recommend
+  turn off UglifyJS since this plugin enable =compact= and =mangle= by default.
+
+* License
+
+  Copyright 2017 Tung Dao
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.

@@ -6,20 +6,30 @@
 
 * Usage
 
-  - Install the plugin via =npm=:
+  Install the plugin via =npm=:
 
-    #+BEGIN_SRC sh
-      npm install --save-dev obfuscator-brunch
-    #+END_SRC
+  #+BEGIN_SRC sh
+    npm install --save-dev obfuscator-brunch
+  #+END_SRC
 
-    Or =yarn=:
+  Or =yarn=:
 
-    #+BEGIN_SRC sh
-      yarn add -D obfuscator-brunch
-    #+END_SRC
+  #+BEGIN_SRC sh
+    yarn add -D obfuscator-brunch
+  #+END_SRC
 
-  - To specify options, use =config.plugins.obfuscator=. These  are passed
-    transparently to JavaScript Obfuscator. See the [[https://github.com/javascript-obfuscator/javascript-obfuscator#javascript-obfuscator-options][JavaScript Obfuscator Options]] for reference.
+  To specify options, use =config.plugins.obfuscator=. These  are passed
+  transparently to JavaScript Obfuscator. See the [[https://github.com/javascript-obfuscator/javascript-obfuscator#javascript-obfuscator-options][JavaScript Obfuscator Options]] for reference.
+  Example:
+
+  #+BEGIN_SRC js
+    exports.plugins = {
+      obfuscator: {
+        domainLock: ['example.com'],
+        selfDefending: true
+      }
+    }
+  #+END_SRC
 
   /Note/: To use this plugin along side UglifyJS, please make sure
   =uglify-js-brunch= is listed before this plugin in =package.json=, especially
